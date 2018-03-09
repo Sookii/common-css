@@ -1,0 +1,124 @@
+/***警告和提示框***/
+.prompt{
+    @include make-mask(.5, #fff, false, true);
+}
+.prompt-dialog {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: $prompt-width;
+    height: $prompt-height;
+    overflow: hidden;
+    @include make-row('flex');
+    @include make-vertical-row();
+    background: $white;
+    border-radius: $border-radius;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    .prompt-dialog-content {
+        @include make-flex-grow(1);
+        padding: 30px 30px 10px 30px;
+        @include make-row('flex');
+        i.iconfont {
+            margin-right: 5px;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 24px;
+        }
+        .text-content {
+            @include make-flex-grow(1);
+            .main-text {
+                padding: 5px 0;
+                color: $gray-800;
+                font-size: $font-size-lg;
+                line-height: 20px;
+            }
+            .sub-text {
+                color: $gray-600;
+                font-size: $font-size-sm;
+                line-height: 20px;
+            }
+        }
+    }
+    .prompt-footer {
+        padding: 10px 30px 30px 30px;
+        text-align: right;
+    }
+
+    &.showing {
+        animation: floatDown .35s ease-out;
+        animation-fill-mode: forwards;
+    }
+    
+    &.hiding {
+        animation: floatUp .35s ease-out;
+        animation-fill-mode: forwards;
+    }
+}
+.hints {
+    position: fixed;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, -50%);
+    min-width: 250px;
+    max-width: 350px;
+    padding: 5px;
+    background: $white;
+    border-radius: $border-radius;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    
+    i.iconfont {
+        margin-right: 5px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 20px;
+        vertical-align: middle;
+    }
+    &.showing {
+        animation: floatVertical 3s ease-in-out;
+    }
+}
+
+@keyframes floatDown {
+    0% {
+        top: 40%;
+    }
+    100% {
+        top: 50%;
+    }
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 50%;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 40%;
+    }
+}
+@keyframes floatVertical {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, 0);
+    }
+    25% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, 16px);
+    }
+    75% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, 16px);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, 0);
+    }
+}

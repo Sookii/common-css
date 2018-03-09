@@ -1,0 +1,34 @@
+// Input sizes
+@mixin input-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+    padding: $padding-y $padding-x;
+    font-size: $font-size;
+    line-height: $line-height;
+    // Manually declare to provide an override to the browser default
+    @if $enable-rounded {
+        border-radius: $border-radius;
+    } @else {
+        border-radius: 0;
+    }
+}
+
+@mixin input-status($input-border-color) {
+    border-color: $input-border-color;
+
+    &:focus,
+    &.focus,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        border-color: $input-border-color;
+        @if $enable-shadows {
+            box-shadow: $input-box-shadow, 0 0 0 $input-focus-width rgba($input-border-color, .5);
+        } @else {
+            box-shadow: 0 0 0 $input-focus-width rgba($input-border-color, .5);
+        }
+    }
+
+    &.disabled,
+    &:disabled {
+        background-color: rgba($input-background, .65);
+        border-color: rgba($input-border-color, .65);
+    }
+}

@@ -1,0 +1,66 @@
+/***自定义弹窗***/
+.popup {
+    @include make-mask(.5, #fff, false, true);
+}
+.popup-iframe {
+    @include make-mask(.5, #fff, true, true);
+}
+
+.popup-dialog {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    @include dialog-size($popup-width, $popup-height);
+    @include make-row('flex');
+    @include make-vertical-row();
+    background: $white;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    //
+    .popup-header {
+        padding-left: .75rem;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        border-bottom: 1px solid $border-color;
+        background: $popup-gray;
+        a, .close {
+            float: right;
+            display: block;
+            width: 30px;
+            height: 30px;
+            color: $gray-800;
+            font-size: 12px;
+            text-align: center;
+            cursor: pointer;
+            &:hover {
+                background: $red;
+                color: $white;
+            }
+        }
+    }
+    .popup-content {
+        overflow: auto;
+        @include make-flex-grow(1);
+        background: $white;
+    }
+    .popup-footer {
+        height: 50px;
+        padding: 10px;
+        border-top: 1px solid $border-color;
+        text-align: right;
+        background: $popup-gray;
+    }
+}
+
+
+
+//dialog size
+.popup-dialog-sm {
+    @include dialog-size($popup-width-sm, $popup-height-sm);
+}
+.popup-dialog-lg {
+    @include dialog-size($popup-width-lg, $popup-height-lg);
+}

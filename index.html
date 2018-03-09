@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="fonts/font-icon.css">
+    <style>
+        .container > div {
+            background: #1c77df;
+        }
+    </style>
+</head>
+<body>
+    栅格
+    <div class="container row" style="height: 50px;margin-bottom: 10px;">
+        <div class="col-3"></div>
+        <div class="col-3" style="background: transparent;"></div>
+        <div class="col-3"></div>
+        <div class="col-2" style="background: transparent;"></div>
+        <div class="col-1"></div>
+    </div>
+     flex
+    <div class="container flex" style="height: 50px;margin-bottom: 10xp;">
+        <div class="flex-3"></div>
+        <div class="flex-3" style="background: transparent;"></div>
+        <div class="flex-3"></div>
+        <div class="flex-2" style="background: transparent;"></div>
+        <div class="flex-1"></div>
+    </div>
+
+    <div class="ip-input-group" style="margin: 10px;width:300px;">
+        <span class="ip-input-group-addon">
+            <div>123</div>
+        </span>
+        <input type="text" class="ip-input ip-input-error">
+        <span class="ip-input-group-addon">33</span>
+    </div> 
+
+    <div class="ip-btn-group" style="margin: 10px;width:300px;">
+        <button class="ip-btn ip-btn-outline-primary ip-btn-sm" disabled><i class="iconfont icon-add" style="font-size: 12px;"></i><span>123</span></button>
+        <button class="ip-btn ip-btn-outline-default ip-btn" ><span>456</span></button>
+        <button class="ip-btn ip-btn-outline-danger ip-btn-sm"><i class="iconfont icon-close" style="font-size: 12px;"></i><span>789</span></button>
+    </div> 
+    <button class="ip-btn ip-btn-outline-primary ip-btn-sm"><i class="iconfont icon-add" style="font-size: 12px;"></i><span>123</span></button>
+    <button class="ip-btn ip-btn-outline-default" disabled><span>456</span></button>
+    <button class="ip-btn ip-btn-outline-default extend-danger"><i class="iconfont icon-close" style="font-size: 12px;color:red"></i><span>456</span></button>
+    <button class="ip-btn ip-btn-outline-danger ip-btn-lg"><i class="iconfont icon-close" style="font-size: 12px;"></i><span>789</span></button>
+    <div class="ip-btn-group" style="margin: 10px;width:300px;">
+        <button class="ip-btn ip-btn-primary ip-btn-sm" disabled><i class="iconfont icon-add" style="font-size: 12px;"></i><span>123</span></button>
+        <button class="ip-btn ip-btn-default ip-btn"><span>456</span></button>
+        <button class="ip-btn ip-btn-danger ip-btn-sm"><span>789</span></button>
+    </div>
+    <button class="ip-btn ip-btn-primary ip-btn-sm"><i class="iconfont icon-add" style="font-size: 12px;"></i><span>123</span></button>
+    <button class="ip-btn ip-btn-default" disabled><span>456</span></button>
+    <button class="ip-btn ip-btn-danger ip-btn-lg"><span>789</span></button>
+
+    <input type="checkbox"> 00
+    <input type="checkbox" disabled> 11
+    <input type="checkbox" class="disabled" checked> 22
+    <input type="checkbox" class="half-checked" checked> 334
+    <input type="checkbox" checked> 33
+    <input type="radio" name="aa" disabled> 44
+    <input type="radio" name="aa" class="disabled" checked> 55
+    <input type="radio" name="aa" checked> 66
+    <input type="radio" name="aa" checked> 77
+
+    <div class="popup-dialog popup-dialog-lg">
+        <div class="popup-header">
+            <a class="close iconfont icon-close"></a>
+            标题
+        </div>
+        <div class="popup-content"></div>
+        <div class="popup-footer">
+            <button class="ip-btn ip-btn-primary"><span>确定</span></button>
+            <button class="ip-btn ip-btn-outline-default"><span>取消</span></button>
+        </div>
+    </div>
+    <div class="popup-dialog">
+        <div class="popup-header">
+            <a class="close iconfont icon-close"></a>
+            标题
+        </div>
+        <div class="popup-content"></div>
+        <div class="popup-footer">
+            <button class="ip-btn ip-btn-primary"><span>确定</span></button>
+            <button class="ip-btn ip-btn-outline-default"><span>取消</span></button>
+        </div>
+    </div>
+    <div class="popup-dialog popup-dialog-sm">
+        <div class="popup-header">
+            <a class="close iconfont icon-close"></a>
+            标题
+        </div>
+        <div class="popup-content"></div>
+        <div class="popup-footer">
+            <button class="ip-btn ip-btn-primary"><span>确定</span></button>
+            <button class="ip-btn ip-btn-outline-default"><span>取消</span></button>
+        </div>
+    </div>
+
+    <div class="prompt-dialog">
+        <div class="prompt-dialog-content">
+            <i class="iconfont icon-warning-fill icon-red"></i>
+            <div class="text-content">
+                <div class="main-text">警告提示内容</div>
+                <div class="sub-text">额外内容</div>
+            </div>
+        </div>
+        <div class="prompt-footer">
+            <button class="ip-btn ip-btn-primary"><span>确定</span></button>
+            <button class="ip-btn ip-btn-outline-default"><span>取消</span></button>
+        </div>
+    </div>
+
+    <div class="hints">
+        <i class="iconfont icon-warning-fill icon-red"></i>
+        tips
+    </div>
+</body>
+</html>

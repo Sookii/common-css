@@ -1,0 +1,73 @@
+.ip-input-group {
+    position: relative;
+    @include make-row('flex');
+    .ip-input-group-addon {
+        @include make-row('flex');
+        align-items: center;
+        padding: 0 .5rem;
+        border: $border-width solid $input-btn-border-color;
+        border-radius: $border-radius;
+        text-align: center;
+        &:first-child {
+            margin-right: -1px;
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+        }
+        &:last-child {
+            margin-left: -1px;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
+    }
+    .ip-input {
+        z-index: 1;
+        border-radius: 0;
+        @include make-flex-grow(1);
+    }
+}
+
+.input-inline {
+    .ip-input {
+        width: auto;
+    }
+}
+
+.ip-input {
+    display: inline-block;
+    width: 100%;
+    font-weight: $btn-font-weight;
+    vertical-align: middle;
+    border: $btn-border-width solid $input-btn-border-color;
+
+    @include input-size($input-padding-y, $input-padding-x, $font-size-base, $input-line-height, $input-btn-border-radius);
+    @include transition($input-transition);
+
+    &:focus,
+    &.focus,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        outline: 0;
+        border-color: $primary;
+        box-shadow: 0 0 0 $input-focus-width rgba($primary, .5);
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        @include box-shadow(none);
+    }
+}
+
+@each $status, $value in $input-border-colors {
+    .ip-input-#{$status} {
+        @include input-status($value);
+    }
+}
+
+.ip-input-lg {
+    @include input-size($input-padding-y-lg, $input-padding-x-lg, $font-size-lg, $input-line-height-lg, $input-btn-border-radius-lg);
+}
+
+.ip-input-sm {
+    @include input-size($input-padding-y-sm, $input-padding-x-sm, $font-size-sm, $input-line-height-sm, $input-btn-border-radius-sm);
+}

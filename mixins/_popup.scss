@@ -1,0 +1,25 @@
+@mixin make-mask($opacity, $color, $islocal, $isfade) {
+    @if $islocal {
+        position: absolute;
+    } @else {
+        position: fixed;
+    }
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    overflow: hidden;
+    @if $isfade {
+        @include fade($opacity, $color);
+    }
+}
+
+@mixin fade($opacity, $color) {
+    background: rgba($color, $opacity);
+}
+
+@mixin dialog-size($width, $height) {
+    width: $width;
+    height: $height;
+}

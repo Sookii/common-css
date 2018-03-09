@@ -1,0 +1,56 @@
+//checkbox overrides
+input[type='checkbox'] {
+    -webkit-appearance: none;
+    -ms-progress-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $border-color;
+    border-radius: 3px;
+    background: $white;
+    outline: none;
+    vertical-align: middle;
+    cursor: pointer;
+
+    &:checked,
+    &.checked {
+        position: relative;
+        background: $primary;
+        font-family:"iconfont" !important;
+        font-size:16px;
+        font-style:normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 12px;
+        &::before {
+            content: "\e680"; 
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &.half-checked {
+            &::before {
+                content: "\e681"; 
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }    
+    }
+
+    
+    &:not(:disabled):not(.disabled):hover,
+    &:not(:disabled):not(.disabled).hover,
+    &:not(:disabled):not(.disabled):checked,
+    &:not(:disabled):not(.disabled).checked {
+        color: $white;
+        border-color: $primary;
+    }
+
+    &:disabled, &.disabled {
+        background: $gray-200;
+        color: $gray-500;
+        cursor: not-allowed;
+    }
+}
