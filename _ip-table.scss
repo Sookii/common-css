@@ -1,0 +1,38 @@
+/*ip table*/
+.ip-table {
+    width: 100%;
+    height: 100%;
+    border: 1px solid $border-color;
+    background: $white;
+    @include make-row('flex');
+    table {
+        width: 100%;
+    }
+    tr {
+        background: $white;
+        border-bottom: 1px solid $border-color;
+        &.checked {
+            background: #f9f9f9;
+        }
+    }
+    th, td {
+        padding: 5px;
+        line-height: 24px;
+        font-size: 14px;
+    }
+    th {
+        background: #f1f1f1;
+    }
+
+    .ip-table-header,
+    .ip-table-body{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 1px;
+    }
+    .pagination {
+        border-top: 1px solid $border-color;
+    }
+}

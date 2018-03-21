@@ -30,7 +30,7 @@ input[type='checkbox'] {
         }
         &.half-checked {
             &::before {
-                content: "\e681"; 
+                content: "\e682"; 
                 position: absolute;
                 left: 50%;
                 top: 50%;

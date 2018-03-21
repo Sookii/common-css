@@ -1,0 +1,35 @@
+@mixin make-spacing($space, $direction, $distance) {
+    #{$space}-#{$direction}: $distance;
+}
+
+$distances: () !default;
+$distances: map-merge((
+    '5': 5px,
+    '10': 10px,
+    '20': 20px,
+    '30': 30px,
+    '50': 50px
+), $distances);
+
+$direction: () !default;
+$direction: map-merge((
+    't': 'top',
+    'r': 'right',
+    'b': 'bottom',
+    'l': 'left'
+), $direction);
+
+@each $direction, $value in $direction {
+    @each $distances, $d-value in $distances {
+        .m#{$direction}-#{$distances} {
+            @include make-spacing('margin', $value, $d-value);   
+        }
+    }
+} 
+@each $direction, $value in $direction {
+    @each $distances, $d-value in $distances {
+        .p#{$direction}-#{$distances} {
+            @include make-spacing('padding', $value, $d-value);   
+        }
+    }
+} 

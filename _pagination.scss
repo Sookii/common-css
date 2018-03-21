@@ -1,0 +1,18 @@
+/*分页*/
+.pagination {
+    padding: 10px;
+    .ip-btn {
+        margin: 0 5px;
+        vertical-align: middle;
+        &.ip-btn-primary {
+            border-color: transparent;
+            color: #666;
+            background: transparent;
+            &.active {
+                border-color: #108EE9;
+                background: #108EE9;
+                color: #fff;
+            }
+        }
+    }
+}

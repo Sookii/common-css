@@ -32,8 +32,12 @@ small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正�
 ul, ol { list-style: none; }
 
 /* 重置文本格式元素 */
-a { text-decoration: none; }
-a:hover { text-decoration: none;color: #1890ff;}
+a, a:visited, a:link, a:active {
+    cursor: pointer;
+    text-decoration: none;
+    color: $primary;
+}
+a:hover { text-decoration: none; color: lighten($primary, 20%);}
 
 abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
     border-bottom: 1px dotted;
@@ -69,7 +73,9 @@ button, input, select, textarea {
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-
+table {
+    border-collapse: collapse;
+}
 //
 // 1. Correct the inability to style clickable types in iOS and Safari.
 // 2. Change font properties to `inherit` in Safari.
@@ -96,7 +102,6 @@ button, input, select, textarea {
         height: 8px;
     }
     ::-webkit-scrollbar-thumb {
-        background: rgba(0,0,0,0.2);
-        border-radius: 4px;
+        background: rgba(0, 0, 0, 0.5);
     }
 }

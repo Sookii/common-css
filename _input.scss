@@ -26,9 +26,13 @@
     }
 }
 
-.input-inline {
-    .ip-input {
-        width: auto;
+.form-inline {
+    .form-group{
+        vertical-align: middle;
+        display: inline-block;
+        .ip-input {
+            width: auto;
+        }
     }
 }
 

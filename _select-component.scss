@@ -1,0 +1,99 @@
+.ip-select {
+    position: relative;
+    display: inline-block;
+    width: $select-width;
+    border: $btn-border-width solid $input-btn-border-color;
+    background: $white;
+    @include input-size($input-padding-y, $input-padding-x, $font-size-base, $input-line-height, $input-btn-border-radius);
+
+    &:hover {
+        outline: 0;
+        border-color: $primary;
+    }
+
+    &.focus,
+    &:not(.disabled).ip-select-open {
+        outline: 0;
+        border-color: $primary;
+        box-shadow: 0 0 0 $input-focus-width rgba($primary, .5);
+    }
+
+    &.disabled {
+        opacity: $btn-disabled-opacity;
+        @include box-shadow(none);
+    }
+
+    //展开标记
+    i.iconfont {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        color: $gray-500;
+        transition: all .3s ease-in-out;
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    &.ip-select-open {
+        i.iconfont {
+            transform: translateY(-50%) rotate(-180deg);
+        }
+    }
+
+    //结果
+    .multi-selection {
+        span.check-item{
+            display: inline-block;
+            background: #f3f3f3;
+            padding: 0 5px;
+            border-radius: 3px;
+            line-height: 20px;
+        }
+    }
+}
+
+.select-list {
+    width: $select-width;
+    max-height: 142px;
+    overflow: auto;
+    border: $btn-border-width solid $input-btn-border-color;
+    border-radius: $border-radius; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    background: $white;
+    ul {
+        background: $white;
+        li {
+            padding: 5px;
+            line-height: 25px;
+            background: $white;
+            i.iconfont {
+                float: right;
+                font-size: 12px;
+            }
+            &:not(.disabled),
+            &:not(.disabled).checked {
+                cursor: pointer;
+                &:hover {
+                    background: rgba($primary, .2);
+                }
+            }
+            &:not(.disabled).checked {
+                background: rgba($primary, .1);
+            }
+
+            &.disabled {
+                color: $gray-500;
+                background: $gray-200;
+            }
+            &.disabled.checked {
+                background: darken(rgba($primary, .1), 15%);
+            }
+        }
+    }
+}
+
+.ip-select-sm {
+    @include input-size($input-padding-y-sm, $input-padding-x-sm, $font-size-sm, $input-line-height-sm, $input-btn-border-radius-sm);
+}
+.ip-select-lg {
+    @include input-size($input-padding-y-lg, $input-padding-x-lg, $font-size-lg, $input-line-height-lg, $input-btn-border-radius-lg);
+}

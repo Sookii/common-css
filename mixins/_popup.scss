@@ -8,11 +8,11 @@
     right: 0;
     bottom: 0;
     left: 0;
-    display: none;
     overflow: hidden;
     @if $isfade {
         @include fade($opacity, $color);
     }
+    z-index: 10001;
 }
 
 @mixin fade($opacity, $color) {

@@ -53,7 +53,7 @@
 
 @mixin button-outline-variant($color, $color-hover, $active-border: $color-hover) {
     color: $color;
-    background-color: transparent;
+    background-color: $white;
     background-image: none;
   
     &:hover {
