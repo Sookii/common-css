@@ -1,0 +1,27 @@
+.ip-dropdown-wrap {
+    position: relative;
+    display: inline-block;
+    .ip-dropdown {
+        display: inline-block;
+        padding: 5px;
+        transition: all .5s ease-in-out;
+        i.iconfont {
+            font-size: 12px;
+        }
+
+        &.out-line {
+            border: 1px solid $border-color;
+            border-radius: $border-radius;
+            &:hover, &.active {
+                border-color: $primary;
+            }
+        }
+
+        &.active {
+            i.iconfont {
+                transform: rotate(-180deg);
+            }
+        }
+        
+    }
+}

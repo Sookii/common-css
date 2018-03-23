@@ -50,47 +50,50 @@
         }
     }
 }
-
-.select-list {
-    width: $select-width;
-    max-height: 142px;
+.select-list{
+    min-width: 140px;
     overflow: auto;
+    background: $white;
+    max-height: 142px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
     border: $btn-border-width solid $input-btn-border-color;
     border-radius: $border-radius; 
-    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}
+ul.list, .list ul {
     background: $white;
-    ul {
+    li {
+        padding: 5px;
+        line-height: 25px;
         background: $white;
-        li {
-            padding: 5px;
-            line-height: 25px;
-            background: $white;
-            i.iconfont {
-                float: right;
-                font-size: 12px;
-            }
-            &:not(.disabled),
-            &:not(.disabled).checked {
-                cursor: pointer;
-                &:hover {
-                    background: rgba($primary, .2);
-                }
-            }
-            &:not(.disabled).checked {
-                background: rgba($primary, .1);
-            }
+        i.iconfont {
+            float: right;
+            font-size: 12px;
+        }
 
-            &.disabled {
-                color: $gray-500;
-                background: $gray-200;
+        &.odd {
+            background: #F5F5F5;
+        }
+
+        &:not(.disabled),
+        &:not(.disabled).checked {
+            cursor: pointer;
+            &:hover {
+                background: rgba($primary, .2)!important;
             }
-            &.disabled.checked {
-                background: darken(rgba($primary, .1), 15%);
-            }
+        }
+        &:not(.disabled).checked {
+            background: rgba($primary, .1);
+        }
+
+        &.disabled {
+            color: $gray-500;
+            background: $gray-200;
+        }
+        &.disabled.checked {
+            background: darken(rgba($primary, .1), 15%);
         }
     }
 }
-
 .ip-select-sm {
     @include input-size($input-padding-y-sm, $input-padding-x-sm, $font-size-sm, $input-line-height-sm, $input-btn-border-radius-sm);
 }
