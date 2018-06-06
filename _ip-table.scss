@@ -1,38 +1,78 @@
 /*ip table*/
 .ip-table {
+    position: absolute;
     width: 100%;
     height: 100%;
-    border: 1px solid $border-color;
     background: $white;
+    border: 1px solid $border-color;
     @include make-row('flex');
+
+    &.horizontal {
+        border-left: 0;
+        border-right: 0;
+    }
+    &.vertical {
+        border-top: 0;
+        border-bottom: 0;
+    }
+    &.none {
+        border: 0;
+    }
+
     table {
         width: 100%;
+        table-layout: fixed;
     }
     tr {
         background: $white;
         border-bottom: 1px solid $border-color;
-        &.checked {
-            background: #f9f9f9;
-        }
     }
     th, td {
         padding: 5px;
-        line-height: 24px;
-        font-size: 14px;
+        line-height: 20px;
+        font-size: 13px;
+        a.virtul-btn {
+            padding: 0 6px;
+        }
     }
     th {
         background: #f1f1f1;
     }
 
-    .ip-table-header,
-    .ip-table-body{
+    .ip-table-header {
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
-        padding: 1px;
+        z-index: 1;
+        &.tl {
+            td, th {
+                text-align: left;
+            }
+        }
+    }
+    .ip-table-body {
+        tr {
+            &.odd {
+                background: #f9f9f9;
+            }
+            &.checked, &.focus, &:hover {
+                background: #e3f2ff;
+            }
+        }
+        &.tc {
+            td, th {
+                text-align: center;
+            }
+        }
     }
     .pagination {
         border-top: 1px solid $border-color;
+    }
+
+    &.strict {
+        .ellipsis {
+            @include multi-ellipsis();
+        }
     }
 }

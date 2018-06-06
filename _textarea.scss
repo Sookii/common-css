@@ -1,0 +1,21 @@
+textarea {
+    display: inline-block;
+    width: 100%;
+    font-weight: $btn-font-weight;
+    border: $btn-border-width solid $input-btn-border-color;
+    &:focus,
+    &.focus,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        outline: 0;
+        border-color: $primary;
+        box-shadow: 0 0 0 $input-focus-width rgba($primary, .5);
+    }
+
+    &.disabled,
+    &:disabled {
+        background: $gray-200;
+        opacity: $btn-disabled-opacity;
+        @include box-shadow(none);
+    }
+}

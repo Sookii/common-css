@@ -1,0 +1,7 @@
+.virtual-scroller-bar {
+    transition: background .35s ease-in-out;
+    background: rgba(0, 0, 0, .2);
+    &:hover, &.active {
+        background: rgba(0, 0, 0, .6)!important;
+    }
+}

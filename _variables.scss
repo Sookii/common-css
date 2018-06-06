@@ -174,7 +174,7 @@ $btn-colors: () !default;
 $btn-colors: map-merge((
   "primary":    ($primary $primary), 
   "default":    ($default $primary),
-  "danger":     ($danger $danger),
+  "error":     ($danger $danger),
 ), $btn-colors);
 
 //input

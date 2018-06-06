@@ -14,6 +14,10 @@
 @mixin input-status($input-border-color) {
     border-color: $input-border-color;
 
+    &:not(:disabled):not(.disabled):hover {
+        border-color: $input-border-color;
+    }
+    
     &:focus,
     &.focus,
     &:not(:disabled):not(.disabled):active,

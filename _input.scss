@@ -31,7 +31,7 @@
         vertical-align: middle;
         display: inline-block;
         .ip-input {
-            width: auto;
+            width: 148px;
         }
     }
 }
@@ -46,6 +46,10 @@
     @include input-size($input-padding-y, $input-padding-x, $font-size-base, $input-line-height, $input-btn-border-radius);
     @include transition($input-transition);
 
+    &:not(:disabled):not(.disabled):hover {
+        border-color: $primary;
+    }
+
     &:focus,
     &.focus,
     &:not(:disabled):not(.disabled):active,
@@ -57,6 +61,7 @@
 
     &.disabled,
     &:disabled {
+        background: $gray-200;
         opacity: $btn-disabled-opacity;
         @include box-shadow(none);
     }

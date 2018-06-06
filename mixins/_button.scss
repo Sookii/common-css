@@ -57,9 +57,8 @@
     background-image: none;
   
     &:hover {
-        color: $color-hover;
-        //background-color: $active-background;
-        border-color: $active-border;
+        color: lighten($color-hover, 15%);
+        border-color: lighten($active-border, 15%);
     }
   
     &:focus,
@@ -72,7 +71,7 @@
     &.disabled,
     &:disabled {
         color: rgba(0, 0, 0, .3);
-        border-color: rgba(0, 0, 0, .2);
+        border-color: $gray-400;
         background-color: rgba(0, 0, 0, .05);
         cursor: not-allowed;
     }
@@ -85,10 +84,10 @@
 
     @if ($color == $default) {
         border-color: $gray-400;
-        &.extend-danger {
+        &.extend-error {
             &:hover {
-                color: $danger;
-                border-color: $danger;
+                color: lighten($danger, 15%);
+                border-color: lighten($danger, 15%);
             }
             &:focus,
             &.focus {

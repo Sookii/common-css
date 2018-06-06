@@ -4,9 +4,12 @@
     width: $select-width;
     border: $btn-border-width solid $input-btn-border-color;
     background: $white;
+    vertical-align: middle;
     @include input-size($input-padding-y, $input-padding-x, $font-size-base, $input-line-height, $input-btn-border-radius);
+    padding-right: 20px;
+    @include text-ellipsis();
 
-    &:hover {
+    &:not(.disabled):hover {
         outline: 0;
         border-color: $primary;
     }
@@ -51,10 +54,9 @@
     }
 }
 .select-list{
-    min-width: 140px;
     overflow: auto;
     background: $white;
-    max-height: 142px;
+    max-height: 212px;
     box-shadow: 0 0 5px rgba(0, 0, 0, .3);
     border: $btn-border-width solid $input-btn-border-color;
     border-radius: $border-radius; 

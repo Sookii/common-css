@@ -1,9 +1,20 @@
 /***自定义弹窗***/
 .popup {
-    @include make-mask(.5, #fff, false, true);
+    @include make-mask(.3, #000, false, true);
+    animation: fadeIn .3s ease-in-out;
 }
 .popup-iframe {
-    @include make-mask(.5, #fff, true, true);
+    @include make-mask(.3, #000, true, true);
+    animation: fadeIn .3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        @include fade(#000, 0);
+    }
+    100% {
+        @include fade(#000, .3);
+    }
 }
 
 .popup-dialog {
@@ -11,13 +22,13 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    overflow: hidden;
     @include dialog-size($popup-width, $popup-height);
     @include make-row('flex');
     @include make-vertical-row();
     background: $white;
     border: 1px solid $border-color;
     border-radius: $border-radius;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .33);
     //
     .popup-header {
         padding-left: .75rem;
@@ -26,6 +37,7 @@
         font-size: 14px;
         border-bottom: 1px solid $border-color;
         background: $popup-gray;
+        @include text-ellipsis();
         a, .close {
             float: right;
             display: block;

@@ -1,7 +1,18 @@
 /***警告和提示框***/
 .prompt{
-    @include make-mask(.5, #fff, false, true);
+    @include make-mask(.3, #000, false, true);
+    animation: fadeIn .3s ease-in-out;
 }
+
+@keyframes fadeIn {
+    0% {
+        @include fade(#000, 0);
+    }
+    100% {
+        @include fade(#000, .3);
+    }
+}
+
 .prompt-dialog {
     position: fixed;
     left: 50%;
@@ -62,6 +73,7 @@
     position: fixed;
     left: 50%;
     top: 5%;
+    z-index: 9999;
     transform: translate(-50%, -50%);
     min-width: 250px;
     max-width: 350px;
@@ -69,7 +81,7 @@
     background: $white;
     border-radius: $border-radius;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    
+    opacity: 0;
     i.iconfont {
         margin-right: 5px;
         display: inline-block;

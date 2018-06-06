@@ -10,12 +10,12 @@
     left: 0;
     overflow: hidden;
     @if $isfade {
-        @include fade($opacity, $color);
+        @include fade($color, $opacity);
     }
-    z-index: 10001;
+    z-index: 1001;
 }
 
-@mixin fade($opacity, $color) {
+@mixin fade($color, $opacity) {
     background: rgba($color, $opacity);
 }
 

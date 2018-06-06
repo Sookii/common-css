@@ -4,18 +4,18 @@
     .ip-btn {
         flex: 0 0 auto;
         border-radius: 0;
+        margin-left: -1px;
         &:first-child {
-            margin-right: -1px;
             border-bottom-left-radius: $input-btn-border-radius;
             border-top-left-radius: $input-btn-border-radius;
         }
         &:last-child {
-            margin-left: -1px;
             border-bottom-right-radius: $input-btn-border-radius;
             border-top-right-radius: $input-btn-border-radius;
         }
         &:focus, &:active,
-        &.focus, &.active {
+        &.focus, &.active,
+        &:hover {
             z-index: 1;
         }
     }

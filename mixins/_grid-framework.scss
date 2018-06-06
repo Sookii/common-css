@@ -27,8 +27,8 @@
     -webkit-box-flex: #{$grows};
     -moz-box-flex: #{$grows};
     -ms-flex: #{$grows};
-    -webkit-flex: #{$grows} 1 0%;
-    flex: #{$grows} 1 0%;
+    -webkit-flex: #{$grows} 1 0;
+    flex: #{$grows} 1 0;
 }
 
 @mixin make-vertical-row() {
