@@ -27,9 +27,12 @@
 }
 
 .form-inline {
+    @include make-row('flex');
+    align-items: center;
     .form-group{
-        vertical-align: middle;
-        display: inline-block;
+        > * {
+            vertical-align: middle;
+        }
         .ip-input {
             width: 148px;
         }

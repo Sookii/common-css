@@ -21,6 +21,17 @@
     }
 }
 
+.btns-collection {
+    .ip-btn:not(:last-child) {
+        margin-right: 5px;
+    }
+}
+.btns-collection-reverse {
+    .ip-btn:not(:first-child) {
+        margin-left: 5px;
+    }
+}
+
 .ip-btn {
     display: inline-block;
     font-weight: $btn-font-weight;
@@ -62,7 +73,8 @@
         }
     }
     .iconfont {
-        font-size: 12px;
+        margin-right: 5px;
+        font-size: inherit;
     }
 }
 

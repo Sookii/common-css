@@ -23,11 +23,12 @@
 
     &.disabled {
         opacity: $btn-disabled-opacity;
+        cursor: not-allowed;
         @include box-shadow(none);
     }
 
     //展开标记
-    i.iconfont {
+    > i.iconfont {
         position: absolute;
         right: 5px;
         top: 50%;
@@ -42,14 +43,31 @@
         }
     }
 
+    .ip-select-render:after {
+        content: ',';
+        visibility: hidden;
+        pointer-events: none;
+        width: 0;
+        display: inline-block;
+    }
     //结果
     .multi-selection {
-        span.check-item{
+        span.checked-item{
+            position: relative;
             display: inline-block;
             background: #f3f3f3;
-            padding: 0 5px;
+            margin-right: 5px;
+            padding: 0 3px;
             border-radius: 3px;
-            line-height: 20px;
+            i.iconfont{
+                transform: scale(0.8);
+                display: inline-block;
+                font-size: 12px;
+                cursor: pointer;
+                &:hover {
+                    color: $red;
+                }
+            }
         }
     }
 }
@@ -89,7 +107,7 @@ ul.list, .list ul {
 
         &.disabled {
             color: $gray-500;
-            background: $gray-200;
+            background: $gray-100;
         }
         &.disabled.checked {
             background: darken(rgba($primary, .1), 15%);
