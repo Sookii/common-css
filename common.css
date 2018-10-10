@@ -79,7 +79,7 @@ a:not(.disabled):hover {
 
 a.disabled {
     cursor: not-allowed;
-    color: #e9ecef !important;
+    color: #ced4da !important;
 }
 
 abbr[title], acronym[title] {
@@ -1231,7 +1231,7 @@ input[type='radio']:disabled::before, input[type='radio'].disabled::before {
     color: #F04134;
 }
 
-.select-list {
+.ip-select-list {
     overflow: auto;
     background: #fff;
     max-height: 212px;
@@ -1240,43 +1240,43 @@ input[type='radio']:disabled::before, input[type='radio'].disabled::before {
     border-radius: 0.25rem;
 }
 
-ul.list, .list ul {
+ul.ip-list, .ip-list ul {
     background: #fff;
 }
 
-ul.list li, .list ul li {
+ul.ip-list li, .ip-list ul li {
     padding: 5px;
     line-height: 25px;
     background: #fff;
 }
 
-ul.list li i.iconfont, .list ul li i.iconfont {
+ul.ip-list li i.iconfont, .ip-list ul li i.iconfont {
     float: right;
     font-size: 12px;
 }
 
-ul.list li.odd, .list ul li.odd {
+ul.ip-list li.odd, .ip-list ul li.odd {
     background: #F5F5F5;
 }
 
-ul.list li:not(.disabled), ul.list li:not(.disabled).checked, .list ul li:not(.disabled), .list ul li:not(.disabled).checked {
+ul.ip-list li:not(.disabled), ul.ip-list li:not(.disabled).checked, .ip-list ul li:not(.disabled), .ip-list ul li:not(.disabled).checked {
     cursor: pointer;
 }
 
-ul.list li:not(.disabled):hover, ul.list li:not(.disabled).checked:hover, .list ul li:not(.disabled):hover, .list ul li:not(.disabled).checked:hover {
+ul.ip-list li:not(.disabled):hover, ul.ip-list li:not(.disabled).checked:hover, .ip-list ul li:not(.disabled):hover, .ip-list ul li:not(.disabled).checked:hover {
     background: rgba(16, 142, 233, 0.2) !important;
 }
 
-ul.list li:not(.disabled).checked, .list ul li:not(.disabled).checked {
+ul.ip-list li:not(.disabled).checked, .ip-list ul li:not(.disabled).checked {
     background: rgba(16, 142, 233, 0.1);
 }
 
-ul.list li.disabled, .list ul li.disabled {
+ul.ip-list li.disabled, .ip-list ul li.disabled {
     color: #adb5bd;
     background: #f5f5f5;
 }
 
-ul.list li.disabled.checked, .list ul li.disabled.checked {
+ul.ip-list li.disabled.checked, .ip-list ul li.disabled.checked {
     background: rgba(11, 98, 161, 0.1);
 }
 
@@ -1324,7 +1324,7 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
 
 /***自定义弹窗***/
 
-.popup {
+.ip-popup {
     position: fixed;
     top: 0;
     right: 0;
@@ -1333,10 +1333,10 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     overflow: hidden;
     background: rgba(0, 0, 0, 0.3);
     z-index: 1001;
-    animation: fadeIn .3s ease-in-out;
+    animation: fadeIn .1s ease-in-out;
 }
 
-.popup-iframe {
+.ip-popup-iframe {
     position: absolute;
     top: 0;
     right: 0;
@@ -1345,7 +1345,7 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     overflow: hidden;
     background: rgba(0, 0, 0, 0.3);
     z-index: 1001;
-    animation: fadeIn .3s ease-in-out;
+    animation: fadeIn .1s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -1357,7 +1357,7 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     }
 }
 
-.popup-dialog {
+.ip-popup-dialog {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -1384,7 +1384,7 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
 }
 
-.popup-dialog .popup-header {
+.ip-popup-dialog .ip-popup-header {
     padding-left: .75rem;
     height: 30px;
     line-height: 30px;
@@ -1396,7 +1396,7 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     white-space: nowrap;
 }
 
-.popup-dialog .popup-header a, .popup-dialog .popup-header .close {
+.ip-popup-dialog .ip-popup-header a, .ip-popup-dialog .ip-popup-header .close {
     float: right;
     display: block;
     width: 30px;
@@ -1408,12 +1408,12 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     cursor: pointer;
 }
 
-.popup-dialog .popup-header a:hover, .popup-dialog .popup-header .close:hover {
+.ip-popup-dialog .ip-popup-header a:hover, .ip-popup-dialog .ip-popup-header .close:hover {
     background: #F04134;
     color: #fff;
 }
 
-.popup-dialog .popup-content {
+.ip-popup-dialog .ip-popup-content {
     overflow: auto;
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -1423,7 +1423,7 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     background: #fff;
 }
 
-.popup-dialog .popup-footer {
+.ip-popup-dialog .ip-popup-footer {
     height: 50px;
     padding: 10px;
     border-top: 1px solid #dee2e6;
@@ -1431,19 +1431,19 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     background: #f5f5f5;
 }
 
-.popup-dialog-sm {
+.ip-popup-dialog-sm {
     width: 320px;
     height: 215px;
 }
 
-.popup-dialog-lg {
+.ip-popup-dialog-lg {
     width: 780px;
     height: 460px;
 }
 
 /***警告和提示框***/
 
-.prompt {
+.ip-prompt {
     position: fixed;
     top: 0;
     right: 0;
@@ -1464,7 +1464,7 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     }
 }
 
-.prompt-dialog {
+.ip-prompt-dialog {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -1491,7 +1491,7 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.prompt-dialog .prompt-dialog-content {
+.ip-prompt-dialog .ip-prompt-dialog-content {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     -ms-flex: 1;
@@ -1510,7 +1510,7 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     flex-wrap: wrap;
 }
 
-.prompt-dialog .prompt-dialog-content i.iconfont {
+.ip-prompt-dialog .ip-prompt-dialog-content i.iconfont {
     margin-right: 5px;
     display: inline-block;
     width: 30px;
@@ -1520,7 +1520,7 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     font-size: 24px;
 }
 
-.prompt-dialog .prompt-dialog-content .text-content {
+.ip-prompt-dialog .ip-prompt-dialog-content .text-content {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     -ms-flex: 1;
@@ -1528,35 +1528,35 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     flex: 1 1 0;
 }
 
-.prompt-dialog .prompt-dialog-content .text-content .main-text {
+.ip-prompt-dialog .ip-prompt-dialog-content .text-content .main-text {
     padding: 5px 0;
     color: #343a40;
     font-size: 1rem;
     line-height: 20px;
 }
 
-.prompt-dialog .prompt-dialog-content .text-content .sub-text {
+.ip-prompt-dialog .ip-prompt-dialog-content .text-content .sub-text {
     color: #6c757d;
     font-size: 0.8125rem;
     line-height: 20px;
 }
 
-.prompt-dialog .prompt-footer {
+.ip-prompt-dialog .ip-prompt-footer {
     padding: 10px 30px 30px 30px;
     text-align: right;
 }
 
-.prompt-dialog.showing {
+.ip-prompt-dialog.showing {
     animation: floatDown .35s ease-out;
     animation-fill-mode: forwards;
 }
 
-.prompt-dialog.hiding {
+.ip-prompt-dialog.hiding {
     animation: floatUp .35s ease-out;
     animation-fill-mode: forwards;
 }
 
-.hints {
+.ip-hints {
     position: fixed;
     left: 50%;
     top: 5%;
@@ -1571,7 +1571,7 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     opacity: 0;
 }
 
-.hints i.iconfont {
+.ip-hints i.iconfont {
     margin-right: 5px;
     display: inline-block;
     width: 30px;
@@ -1582,7 +1582,7 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     vertical-align: middle;
 }
 
-.hints.showing {
+.ip-hints.showing {
     animation: floatVertical 3s ease-in-out;
 }
 
@@ -1679,7 +1679,12 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     padding: 0 6px;
 }
 
+.ip-table th.readonly, .ip-table td.readonly {
+    color: #999999;
+}
+
 .ip-table th {
+    text-align: left;
     background: #f1f1f1;
 }
 
@@ -1687,7 +1692,6 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
     z-index: 1;
 }
 
@@ -1707,7 +1711,7 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     text-align: center;
 }
 
-.ip-table .pagination {
+.ip-table .ip-pagination {
     border-top: 1px solid #dee2e6;
 }
 
@@ -1724,36 +1728,73 @@ ul.list li.disabled.checked, .list ul li.disabled.checked {
     word-break: break-all;
 }
 
+.ip-table .t-date, .ip-table .t-time {
+    margin: 0 2px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
 /*分页*/
 
-.pagination {
+.ip-pagination {
     padding: 10px;
 }
 
-.pagination .pagesize-info span {
+.ip-pagination .pagesize-info span {
     margin-right: 10px;
+    vertical-align: middle;
 }
 
-.pagination .pagesize-info em {
+.ip-pagination .pagesize-info em {
     color: #108EE9;
     font-size: 16px;
 }
 
-.pagination .ip-btn {
+.ip-pagination .prev::after, .ip-pagination .next::after {
+    content: '···';
+    font-size: 18px;
+    width: 32px;
+    display: inline-block;
+    font-family: 'iconfont';
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.ip-pagination .prev:hover::after {
+    color: #108EE9;
+    content: '\e9a9';
+}
+
+.ip-pagination .next:hover::after {
+    color: #108EE9;
+    content: '\e9c2';
+}
+
+.ip-pagination .ip-btn {
     margin: 0 5px;
     vertical-align: middle;
 }
 
-.pagination .ip-btn.ip-btn-primary {
+.ip-pagination .ip-btn.ip-btn-primary {
     border-color: transparent;
     color: #666;
     background: transparent;
 }
 
-.pagination .ip-btn.ip-btn-primary.active {
+.ip-pagination .ip-btn.ip-btn-primary.active {
     border-color: #108EE9;
     background: #108EE9;
     color: #fff;
+}
+
+.ip-pagination .ip-btn.ip-btn-primary:hover {
+    border-color: #52b0f3;
+}
+
+.ip-pagination .ip-btn .iconfont {
+    margin: 0;
 }
 
 .virtual-scroller-bar {

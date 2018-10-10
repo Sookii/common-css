@@ -40,7 +40,7 @@ a:not(.disabled), a:not(.disabled):visited, a:not(.disabled):link, a:not(.disabl
 a:not(.disabled):hover { text-decoration: none; color: lighten($primary, 20%);}
 a.disabled {
     cursor: not-allowed;
-    color: $gray-200!important;
+    color: $gray-400!important;
 }
 
 abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */

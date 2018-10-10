@@ -1,11 +1,11 @@
 /***自定义弹窗***/
-.popup {
+.ip-popup {
     @include make-mask(.3, #000, false, true);
-    animation: fadeIn .3s ease-in-out;
+    animation: fadeIn .1s ease-in-out;
 }
-.popup-iframe {
+.ip-popup-iframe {
     @include make-mask(.3, #000, true, true);
-    animation: fadeIn .3s ease-in-out;
+    animation: fadeIn .1s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -17,7 +17,7 @@
     }
 }
 
-.popup-dialog {
+.ip-popup-dialog {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -30,7 +30,7 @@
     border-radius: $border-radius;
     box-shadow: 0 0 10px rgba(0, 0, 0, .33);
     //
-    .popup-header {
+    .ip-popup-header {
         padding-left: .75rem;
         height: 30px;
         line-height: 30px;
@@ -54,12 +54,12 @@
             }
         }
     }
-    .popup-content {
+    .ip-popup-content {
         overflow: auto;
         @include make-flex-grow(1);
         background: $white;
     }
-    .popup-footer {
+    .ip-popup-footer {
         height: 50px;
         padding: 10px;
         border-top: 1px solid $border-color;
@@ -71,9 +71,9 @@
 
 
 //dialog size
-.popup-dialog-sm {
+.ip-popup-dialog-sm {
     @include dialog-size($popup-width-sm, $popup-height-sm);
 }
-.popup-dialog-lg {
+.ip-popup-dialog-lg {
     @include dialog-size($popup-width-lg, $popup-height-lg);
 }

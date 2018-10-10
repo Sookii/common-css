@@ -1,13 +1,39 @@
 /*分页*/
-.pagination {
+.ip-pagination {
     padding: 10px;
     .pagesize-info {
         span {
             margin-right: 10px;
+            vertical-align: middle;
         }
         em {
             color: $primary;
             font-size: 16px;
+        }
+    }
+    .prev, .next {
+        &::after {
+            content: '···';
+            font-size: 18px;
+            width: 32px;
+            display: inline-block;
+            font-family: 'iconfont';
+            color: rgba(0,0,0,.5);
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+    }
+    .prev:hover {
+        &::after {
+            color: $primary;
+            content: '\e9a9';
+        }
+    }
+    .next:hover {
+        &::after {
+            color: $primary;
+            content: '\e9c2';
         }
     }
     .ip-btn {
@@ -18,10 +44,16 @@
             color: #666;
             background: transparent;
             &.active {
-                border-color: #108EE9;
-                background: #108EE9;
+                border-color: $primary;
+                background: $primary;
                 color: #fff;
             }
+            &:hover {
+                border-color: lighten($primary, 15%);
+            }
+        }
+        .iconfont {
+            margin: 0;
         }
     }
 }

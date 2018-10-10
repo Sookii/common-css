@@ -34,8 +34,12 @@
         a.virtul-btn {
             padding: 0 6px;
         }
+        &.readonly {
+            color: #999999;
+        }
     }
     th {
+        text-align: left;
         background: #f1f1f1;
     }
 
@@ -65,7 +69,7 @@
             }
         }
     }
-    .pagination {
+    .ip-pagination {
         border-top: 1px solid $border-color;
     }
 
@@ -79,5 +83,10 @@
         .ellipsis {
             @include multi-ellipsis();
         }
+    }
+    .t-date, .t-time {
+        margin: 0 2px;
+        display: inline-block;
+        white-space: nowrap;
     }
 }

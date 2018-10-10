@@ -71,7 +71,7 @@
         }
     }
 }
-.select-list{
+.ip-select-list{
     overflow: auto;
     background: $white;
     max-height: 212px;
@@ -79,7 +79,7 @@
     border: $btn-border-width solid $input-btn-border-color;
     border-radius: $border-radius; 
 }
-ul.list, .list ul {
+ul.ip-list, .ip-list ul {
     background: $white;
     li {
         padding: 5px;

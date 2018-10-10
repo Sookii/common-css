@@ -1,5 +1,5 @@
 /***警告和提示框***/
-.prompt{
+.ip-prompt{
     @include make-mask(.3, #000, false, true);
     animation: fadeIn .3s ease-in-out;
 }
@@ -13,7 +13,7 @@
     }
 }
 
-.prompt-dialog {
+.ip-prompt-dialog {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -26,7 +26,7 @@
     background: $white;
     border-radius: $border-radius;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    .prompt-dialog-content {
+    .ip-prompt-dialog-content {
         @include make-flex-grow(1);
         padding: 30px 30px 10px 30px;
         @include make-row('flex');
@@ -54,7 +54,7 @@
             }
         }
     }
-    .prompt-footer {
+    .ip-prompt-footer {
         padding: 10px 30px 30px 30px;
         text-align: right;
     }
@@ -69,7 +69,7 @@
         animation-fill-mode: forwards;
     }
 }
-.hints {
+.ip-hints {
     position: fixed;
     left: 50%;
     top: 5%;
