@@ -1699,6 +1699,10 @@ ul.ip-list li.disabled.checked, .ip-list ul li.disabled.checked {
     text-align: left;
 }
 
+.ip-table .ip-table-header.tc td, .ip-table .ip-table-header.tc th {
+    text-align: center;
+}
+
 .ip-table .ip-table-body tr.odd {
     background: #f9f9f9;
 }
@@ -1726,6 +1730,12 @@ ul.ip-list li.disabled.checked, .ip-list ul li.disabled.checked {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     word-break: break-all;
+}
+
+.ip-table.strict .text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .ip-table .t-date, .ip-table .t-time {
