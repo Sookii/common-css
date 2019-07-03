@@ -33,6 +33,7 @@
 }
 
 .ip-btn {
+    min-width: 68px;
     display: inline-block;
     font-weight: $btn-font-weight;
     text-align: center;
@@ -73,7 +74,7 @@
         }
     }
     .iconfont {
-        margin-right: 5px;
+        margin-right: 6px;
         font-size: inherit;
     }
 }
@@ -91,6 +92,9 @@ fieldset:disabled a.ip-btn {
 @each $color, $value in $btn-colors {
     .ip-btn-outline-#{$color} {
         @include button-outline-variant(nth($value, 1), nth($value, 2));
+        &.icon-include {
+            padding-right: 0.75rem;
+        }
     }
 }
 //

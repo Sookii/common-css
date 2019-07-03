@@ -1,16 +1,7 @@
 /***警告和提示框***/
 .ip-prompt{
     @include make-mask(.3, #000, false, true);
-    animation: fadeIn .3s ease-in-out;
-}
-
-@keyframes fadeIn {
-    0% {
-        @include fade(#000, 0);
-    }
-    100% {
-        @include fade(#000, .3);
-    }
+    pointer-events: all;
 }
 
 .ip-prompt-dialog {
@@ -59,78 +50,83 @@
         text-align: right;
     }
 
-    &.showing {
-        animation: floatDown .35s ease-out;
-        animation-fill-mode: forwards;
-    }
+    // &.showing {
+    //     animation: floatDown .35s ease-out;
+    //     animation-fill-mode: forwards;
+    // }
     
-    &.hiding {
-        animation: floatUp .35s ease-out;
-        animation-fill-mode: forwards;
-    }
+    // &.hiding {
+    //     animation: floatUp .35s ease-out;
+    //     animation-fill-mode: forwards;
+    // }
 }
-.ip-hints {
+
+/***tips***/
+.ip-message {
     position: fixed;
-    left: 50%;
-    top: 5%;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    min-width: 250px;
-    max-width: 350px;
-    padding: 5px;
-    background: $white;
-    border-radius: $border-radius;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    opacity: 0;
-    i.iconfont {
-        margin-right: 5px;
+    top: 16px;
+    left: 0;
+    z-index: 1010;
+    width: 100%;
+    pointer-events: none;
+}
+
+.ip-tips-notice {
+    text-align: center;
+    margin-bottom: 8px;
+    .ip-tips-content{
         display: inline-block;
-        width: 30px;
-        height: 30px;
-        text-align: center;
-        line-height: 30px;
-        font-size: 20px;
-        vertical-align: middle;
-    }
-    &.showing {
-        animation: floatVertical 3s ease-in-out;
+        min-width: 330px;
+        color: #000;
+        padding: 10px 10px;
+        font-size: 14px;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        text-align: left;
+        pointer-events: all;
+        > * {
+            vertical-align: middle;
+        }
+        .iconfont {
+            font-size:26px;
+            margin-right:5px;
+            color: #FFBF00;
+        }
+        @each $type, $value in $tipsMap {
+            &.ip-tips-#{$type} {
+                background: nth($value, 1);
+                border: 1px solid nth($value, 2);
+                .iconfont {
+                    color: nth($value, 3);
+                }
+            }
+        }
     }
 }
 
-@keyframes floatDown {
-    0% {
-        top: 40%;
-    }
+/***loading***/
+@keyframes loadingCircle {
     100% {
-        top: 50%;
+      transform: rotate(360deg);
     }
 }
-
-@keyframes floatUp {
-    0% {
-        opacity: 50%;
-        top: 50%;
-    }
-    100% {
-        opacity: 0;
-        top: 40%;
-    }
+.ip-spin {
+    display: inline-block;
+    animation: loadingCircle 1s infinite linear;
+    -webkit-animation: loadingCircle 1s infinite linear;
+    margin-right:8px;
 }
-@keyframes floatVertical {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate(-50%, 0);
+.ip-btn-loading {
+    background-color: #52b0f3;
+    border-color: transparent;
+    padding-left: 20px;
+    pointer-events: none;
+    color: #fff;
+    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    .ip-btn-loading .iconfont{
+        margin:0;
     }
-    25% {
-        opacity: 1;
-        -webkit-transform: translate(-50%, 16px);
-    }
-    75% {
-        opacity: 1;
-        -webkit-transform: translate(-50%, 16px);
-    }
-    100% {
-        opacity: 0;
-        -webkit-transform: translate(-50%, 0);
+    .ip-btn-loading span{
+        margin-left: 8px;
     }
 }

@@ -107,6 +107,7 @@ table {
     }
     ::-webkit-scrollbar-thumb {
         background: rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
     }
 }
 
@@ -114,4 +115,44 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none !important;
     margin: 0;
+}
+
+/* 纵向对齐方式 */
+.v-bottom {
+    vertical-align: bottom;
+}
+
+.v-middle {
+    vertical-align: middle;
+}
+
+.v-top {
+    vertical-align: top;
+}
+
+
+/* 内联属性 */
+.inline {
+    display: inline;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/* 浮动 */
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clear {
+    clear: both;
 }

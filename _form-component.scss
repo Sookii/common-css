@@ -2,4 +2,7 @@
     display: inline-block;
     padding: 6px;
     cursor: pointer;
+    input[type='radio'] {
+        margin-right: 5px;
+    }
 }

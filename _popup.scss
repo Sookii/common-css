@@ -2,10 +2,16 @@
 .ip-popup {
     @include make-mask(.3, #000, false, true);
     animation: fadeIn .1s ease-in-out;
+    @include make-row('flex');
+    justify-content: center;
+    align-items: center;
 }
 .ip-popup-iframe {
     @include make-mask(.3, #000, true, true);
     animation: fadeIn .1s ease-in-out;
+    @include make-row('flex');
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes fadeIn {
@@ -61,10 +67,13 @@
     }
     .ip-popup-footer {
         height: 50px;
-        padding: 10px;
+        padding: 8px;
         border-top: 1px solid $border-color;
         text-align: right;
         background: $popup-gray;
+        .ip-btn:not(:last-child) {
+            margin-right: 10px;
+        }
     }
 }
 

@@ -1,0 +1,17 @@
+$fontsize: () !default;
+$fontsize: map-merge((
+    '0': 0,
+    '12': 12px,
+    '13': 13px,
+    '14': 14px,
+    '15': 15px,
+    '16': 16px,
+    '18': 18px,
+    '20': 20px
+), $fontsize);
+
+@each $size, $value in $fontsize {
+    .ft-#{$size} {
+        font-size: $value;
+    }
+}

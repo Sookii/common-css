@@ -7,13 +7,14 @@
 @import "variables";
 @import "functions";
 @import "reboot";
-@import "spacing";
-@import "layout";
-@import "button";
-@import "input";
+@import "font";             // 字体大小
+@import "spacing";          // margin padding
+@import "layout";           // flex row 
+@import "button";           // ip-btn
+@import "input";            // ip-input
 @import "textarea";
-@import "checkbox";
-@import "radio";
+@import "checkbox";         // checkbox
+@import "radio";            // radio
 @import "form-component";
 @import "select-component";
 @import "dropdown";
@@ -21,4 +22,5 @@
 @import "prompt";
 @import "ip-table";
 @import "pagination";
-@import "_virtualscroller";
+@import "virtualscroller";
+@import "icon-color";

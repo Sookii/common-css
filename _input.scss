@@ -27,7 +27,7 @@
 }
 
 .form-inline {
-    @include make-row('flex');
+    @include make-row('row');
     align-items: center;
     .form-group{
         > * {

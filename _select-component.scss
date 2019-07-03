@@ -52,6 +52,7 @@
     }
     //结果
     .multi-selection {
+        overflow: hidden;
         span.checked-item{
             position: relative;
             display: inline-block;
@@ -88,6 +89,7 @@ ul.ip-list, .ip-list ul {
         i.iconfont {
             float: right;
             font-size: 12px;
+            line-height: inherit;
         }
 
         &.odd {

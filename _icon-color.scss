@@ -1,0 +1,15 @@
+$icon-colors: () !default;
+$icon-colors: map-merge((
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "green": $green,
+  "blue": $blue,
+  "gray": $gray-600,
+), $icon-colors);
+
+@each $color, $value in $icon-colors {
+    .icon-#{$color} {
+        color: $value;
+    }
+}

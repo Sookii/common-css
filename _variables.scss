@@ -17,7 +17,7 @@ $enable-transitions:        true !default;      //变形
 $white:    #fff !default;
 $gray-100: #f5f5f5 !default;
 $gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
+$gray-300: #d9d9d9 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
@@ -39,12 +39,12 @@ $grays: map-merge((
   "900": $gray-900
 ), $grays);
 
-$blue:    #108EE9 !default;
+$blue:    #108EE9 !default;     // 海口定制primary  #00c1de
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
 $red:     #F04134 !default;
-$orange:  #fd7e14 !default;
+$orange:  #f38403 !default;
 $yellow:  #FFBF00 !default;
 $green:   #3DBD7D !default;
 $teal:    #20c997 !default;
@@ -174,6 +174,7 @@ $btn-colors: () !default;
 $btn-colors: map-merge((
   "primary":    ($primary $primary), 
   "default":    ($default $primary),
+  "danger":    ($orange $orange),
   "error":     ($danger $danger),
 ), $btn-colors);
 
@@ -227,3 +228,10 @@ $popup-height-lg: 460px !default;
 
 $prompt-width: 380px !default;
 $prompt-height: 200px !default;
+
+$tipsMap: () !default;
+$tipsMap: map-merge((
+    'success': (#F6FFEC, #BBEC95, #23B12D),
+    'warning': (#FFFBE6, #FFE58F, #FFBF00),
+    'error': (#FFF0F0, #FFA8A4, #F04134),
+), $tipsMap);

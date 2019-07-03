@@ -28,8 +28,7 @@
         border-bottom: 1px solid $border-color;
     }
     th, td {
-        padding: 5px;
-        line-height: 20px;
+        padding: 6px;
         font-size: 13px;
         a.virtul-btn {
             padding: 0 6px;
@@ -37,10 +36,21 @@
         &.readonly {
             color: #999999;
         }
+        &:first-child {
+            padding-left: 10px;
+        }
+        &:not(:last-child) {
+            border-right: 1px solid $border-color;
+        }
     }
     th {
-        text-align: left;
-        background: #f1f1f1;
+        background: #F0F0F0;
+    }
+
+    &.th-mode {
+        th, td {
+            border: none;
+        }
     }
 
     .ip-table-header {
@@ -61,11 +71,19 @@
     }
     .ip-table-body {
         tr {
-            &.odd {
+            &.odd, &.ignore {
                 background: #f9f9f9;
             }
             &.checked, &.focus, &:hover {
                 background: #e3f2ff;
+            }
+            &.disabled {
+                background: #f9f9f9!important;
+            }
+            &.ignore, &.disabled {
+                td {
+                    color: #999!important;
+                }
             }
         }
         &.tc {
@@ -76,12 +94,6 @@
     }
     .ip-pagination {
         border-top: 1px solid $border-color;
-    }
-
-    &.td-mode {
-        th:not(:last-child), td:not(:last-child) {
-            border-right: 1px solid $border-color;
-        }
     }
 
     &.strict {
@@ -97,4 +109,8 @@
         display: inline-block;
         white-space: nowrap;
     }
+}
+
+.hideBorderBottom table tr:last-child {
+    border-bottom: transparent;
 }
